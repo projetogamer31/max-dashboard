@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Dashboard 🚀</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #e2e8f0; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        .card { background: #1e293b; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #334155; }
+        h1 { color: #38bdf8; }
+        h2 { color: #94a3b8; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+        .status-badge { background: #059669; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+        .task-list { list-style: none; padding: 0; }
+        .task-item { display: flex; align-items: center; margin-bottom: 10px; }
+        .task-item::before { content: "🚀"; margin-right: 10px; }
+        .progress-bar { background: #334155; border-radius: 10px; height: 10px; overflow: hidden; margin-top: 10px; }
+        .progress-fill { background: #38bdf8; height: 100%; width: 65%; }
+        .footer { font-size: 0.8rem; color: #64748b; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Max Dashboard</h1>
+            <span class="status-badge">ONLINE</span>
+        </div>
+        
+        <div class="card">
+            <h2>🎯 Foco Atual</h2>
+            <p><strong>Projeto Sergipe:</strong> Organizando logística de mudança e expansão da clínica.</p>
+            <div class="progress-bar"><div class="progress-fill" style="width: 30%;"></div></div>
+        </div>
+
+        <div class="card">
+            <h2>⚡ Ações Recentes</h2>
+            <ul class="task-list">
+                <li class="task-item">Integração Google Drive & Calendar concluída.</li>
+                <li class="task-item">Pesquisa técnica sobre MCP/NotebookLM finalizada.</li>
+                <li class="task-item">Estruturação de memória de longo prazo (MEMORY.md).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>📈 Performance</h2>
+            <p>Modelo: <strong>Gemini 3 Flash</strong></p>
+            <p>Saúde do Contexto: <strong>Excelente (9% ocupado)</strong></p>
+        </div>
+
+        <div class="footer">
+            Atualizado proativamente por Max em 01/02/2026.
+        </div>
+    </div>
+</body>
+</html>
+<!-- trigger -->
