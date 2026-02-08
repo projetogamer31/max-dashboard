@@ -38,3 +38,23 @@ export async function bridgeFetch(path: string, init?: RequestInit) {
   const data = await res.json();
   return NextResponse.json(data);
 }
+
+export async function bridgeFetchJson<T>(path: string, init?: RequestInit): Promise<T> {
+  const { baseUrl, apiKey } = getBridgeConfig();
+  const res = await fetch(`${baseUrl}${path}`, {
+    ...init,
+    headers: {
+      "X-API-Key": apiKey,
+      "Content-Type": "application/json",
+      ...(init?.headers ?? {})
+    },
+    cache: "no-store"
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`Bridge error ${res.status}: ${text || res.statusText}`);
+  }
+
+  return (await res.json()) as T;
+}
